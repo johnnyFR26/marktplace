@@ -1,0 +1,64 @@
+.profile-header {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 100px;
+  
+    .background-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .profile-content {
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+
+  
+      .logo-img {
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid white;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+      }
+  
+      h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-family: 'Poppins', sans-serif;
+      }
+  
+      .status-badge {
+        background: #4caf50;
+        color: white;
+        font-size: 0.85rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+        margin-left: auto;
+        white-space: nowrap;
+      }
+    }
+  }
+  
+  .categories {
+    margin-top: 70px;
+
+  }
+  toolbar{
+    position: static;
+    margin-top: 700px;
+    left: 0;
+    right: 0;
+  }
+
+  h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: green
+  }

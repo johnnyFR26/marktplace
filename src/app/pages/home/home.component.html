@@ -1,0 +1,24 @@
+@if (clientProfile()) {
+  <div class="profile-header">
+      <img class="background-img" [src]="clientProfile()?.background" alt="">
+      
+      <div class="profile-content">
+        <img class="logo-img" [src]="clientProfile()?.logo" alt="">
+        <h1>{{ clientProfile()?.name }}</h1>
+      </div>
+    </div>
+
+    <toolbar [categories]="clientProfile()?.categories"/>
+  
+  <section class="categories">
+      @for (category of clientProfile()?.categories; track $index) {
+          <category
+              [name]="category.name"
+              [products]="category.products"
+           />
+      }
+  </section>
+}
+@else {
+  <h2>Loading...</h2>
+}

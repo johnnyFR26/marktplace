@@ -1,0 +1,36 @@
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    border: solid 1px #ccc;
+    padding-top: 10px;
+  
+    input {
+      width: 80%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+  
+    .categories {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+  
+      button {
+        background: none;
+        border: none;
+        color: #d11;
+        font-weight: bold;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+      }
+  
+      button:hover, button.active {
+        border-bottom: 2px solid red;
+      }
+    }
+  }
+  
