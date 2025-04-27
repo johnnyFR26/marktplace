@@ -10,5 +10,5 @@ import { CategoryService } from "../../services/category.service";
 })
 export class PackageComponent {
     private categoryService = inject(CategoryService)
-    readonly categories = this.categoryService.getCategories()
+    readonly categories = this.categoryService.getPackageCategories()
 }

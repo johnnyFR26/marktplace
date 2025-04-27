@@ -20,7 +20,12 @@ export class ClienttService {
             .subscribe({
                 next: (res: any) => {
                     this.clientProfile.set(res)
-                    this.categoryService.setCategories(res.categories)
+                    this.categoryService.setDeliveryCategories(res.categories.filter((category: any) => {
+                        return category.disponibility.store.delivery
+                    })),
+                    this.categoryService.setPackageCategories(res.categories.filter((category: any) => {
+                        return category.disponibility.store.package
+                    }))
                 },
                 error: (err: any) => {
                     console.log(err)

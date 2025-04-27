@@ -10,5 +10,5 @@ import { CategoryComponent } from "../category/category.component";
 })
 export class DeliveryComponent {
     private categoryService = inject(CategoryService)
-    readonly categories = this.categoryService.getCategories()
+    readonly categories = this.categoryService.getDeliveryCategories()
 }
