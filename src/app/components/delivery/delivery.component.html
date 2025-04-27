@@ -1,0 +1,9 @@
+<section class="categories">
+    @for (category of categories(); track $index) {
+        <category
+            [id]="category.id"
+            [name]="category.name"
+            [products]="category.products"
+         />
+    }
+</section>

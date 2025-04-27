@@ -39,8 +39,11 @@ export class ToolbarComponent {
             })
         })
      }
-
-    selectCategory(category: string) {
-        console.log('Categoria selecionada:', category);
+     selectCategory(category: any) {
+      const element = document.getElementById(category.id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }
+    }
+    
 }

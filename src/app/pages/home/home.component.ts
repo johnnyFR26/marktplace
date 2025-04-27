@@ -3,10 +3,13 @@ import { ActivatedRoute } from '@angular/router';
 import { ClienttService } from '../../services/client.service';
 import { CategoryComponent } from '../../components/category/category.component';
 import { ToolbarComponent } from '../../components/toolbar/toolbar.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { DeliveryComponent } from '../../components/delivery/delivery.component';
+import { PackageComponent } from '../../components/package/package.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CategoryComponent, ToolbarComponent],
+  imports: [ToolbarComponent, MatTabsModule, DeliveryComponent, PackageComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

@@ -11,12 +11,14 @@
     <toolbar [categories]="clientProfile()?.categories"/>
   
   <section class="categories">
-      @for (category of clientProfile()?.categories; track $index) {
-          <category
-              [name]="category.name"
-              [products]="category.products"
-           />
-      }
+    <mat-tab-group>
+      <mat-tab label="Entrega">
+        <delivery></delivery>
+      </mat-tab>
+      <mat-tab label="Encomendas">
+        <package></package>
+      </mat-tab>
+    </mat-tab-group>    
   </section>
 }
 @else {

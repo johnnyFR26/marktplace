@@ -9,7 +9,7 @@ import { ProductModalComponent } from "../../modals/product-modal/product-modal.
     imports: [ProductComponent],
     template: `
         <div class="category-container">
-          <h2 class="category-title">
+          <h2 class="category-title" [id]="id()">
             <span class="arrow">❯</span> {{ name() }}
          </h2>
         <div class="product-grid">
@@ -25,6 +25,7 @@ import { ProductModalComponent } from "../../modals/product-modal/product-modal.
 })
 export class CategoryComponent {
  readonly name = input<string>();
+ readonly id = input<string>();
  readonly products = input<any[]>();
  readonly dialog = inject(MatDialog);
 
