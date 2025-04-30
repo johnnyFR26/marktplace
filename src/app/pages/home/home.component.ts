@@ -25,6 +25,19 @@ export class HomeComponent implements OnInit {
       this.url = params.get('slug')
 
       this.clientService.queryClientProfile(this.url!)
+      this.changeFavIcon(this.clientProfile()?.options?.favicon)
     })
+  }
+
+  changeFavIcon(icon: string) {
+    const link: HTMLLinkElement | null = document.querySelector('link[rel*="icon"]') || null;
+    if (link) {
+      link.href = icon;
+    }else{
+      const link = document.createElement('link');
+      link.rel = 'icon';
+      link.href = icon;
+      document.head.appendChild(link);
+    }
   }
 }
