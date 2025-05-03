@@ -1,7 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClienttService } from '../../services/client.service';
-import { CategoryComponent } from '../../components/category/category.component';
 import { ToolbarComponent } from '../../components/toolbar/toolbar.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { DeliveryComponent } from '../../components/delivery/delivery.component';

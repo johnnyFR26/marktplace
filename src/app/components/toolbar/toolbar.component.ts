@@ -19,6 +19,7 @@ import { FormsModule } from "@angular/forms";
             </button>
         }
       </nav>
+      <img src="big_shadow_full.png" alt="">
     </div>
     `
 })
