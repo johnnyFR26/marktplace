@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, effect, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClienttService } from '../../services/client.service';
 import { ToolbarComponent } from '../../components/toolbar/toolbar.component';
@@ -24,7 +24,12 @@ export class HomeComponent implements OnInit {
       this.url = params.get('slug')
 
       this.clientService.queryClientProfile(this.url!)
-      this.changeFavIcon(this.clientProfile()?.options?.favicon)
+      
+      effect(() => {
+        if(this.clientProfile()?.options?.favicon){
+          this.changeFavIcon(this.clientProfile()?.options?.favicon)
+        }
+      })
     })
   }
 
